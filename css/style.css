@@ -3896,3 +3896,7 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
     line-height: 28px!important;
 }
 }
+
+.client-logs img{
+    border-radius: 5px;
+}
