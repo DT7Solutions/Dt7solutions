@@ -3900,3 +3900,8 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 .client-logs img{
     border-radius: 5px;
 }
+
+.justify-text{
+    text-align: justify!important;
+
+}
