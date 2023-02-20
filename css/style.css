@@ -3905,3 +3905,11 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
     text-align: justify!important;
 
 }
+
+.para-head{
+    color: #3d3d3d;
+}
+
+.para-align{
+    text-align: center;
+}
