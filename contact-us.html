@@ -141,9 +141,9 @@
                                         <input type="email" name="email" id="email" placeholder="E-mail*"  class="border-radius-4 bg-white medium-input required">
                                         <input type="text" name="subject" id="subject" placeholder="Subject"  class="border-radius-4 bg-white medium-input required">
                                         <textarea  type="text" name="comment" id="comment" rows="5" placeholder="Your Message"   class="border-radius-4 bg-white medium-input required "></textarea>
-                                        <div class="form-group col mb-4 col-md-12">
+                                        <!-- <div class="form-group col mb-4 col-md-12">
                                             <div class="g-recaptcha" data-sitekey="6LecXnglAAAAAJN5UHK8J3dGbZawMdtg7OXRj4mQ"></div>
-                                        </div>
+                                        </div> -->
                                         <button  type="submit"  onclick="sendMail()" class="btn btn-small border-radius-4 btn-dark-gray submit">send message</button>
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@
     comment : document.getElementById("comment").value,
   };
 
-  const serviceID = "service_n91k5kr";
+  const serviceID = "service_n9bkqgj";
   const templateID = "template_73pwg8m";
 
     emailjs.send(serviceID, templateID, params)
