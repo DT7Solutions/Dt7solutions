@@ -133,18 +133,18 @@
                     <div class="col sm-margin-30px-bottom wow animate__fadeInLeft">
                         <div class="padding-fifteen-all bg-light-gray border-radius-6 lg-padding-seven-all md-padding-eight-all sm-padding-30px-all h-100">
                             <span class="text-extra-dark-gray alt-font text-large font-weight-600 margin-25px-bottom d-block">Ready to get started?</span>
-                            <form id="contact-form-3" action="email-templates/contact-form.php" method="post">
+                            <form id="contact-form-3" >
                                 <div class="row justify-content-center"> 
                                     <div>
                                         <div class="form-results d-none"></div>
-                                        <input type="text" name="name" id="name" placeholder="Name*" class="border-radius-4 bg-white medium-input required">
-                                        <input type="email" name="email" id="email" placeholder="E-mail*" class="border-radius-4 bg-white medium-input required">
-                                        <input type="tel" name="subject" id="subject" placeholder="Subject" class="border-radius-4 bg-white medium-input">
-                                        <textarea name="comment" id="comment" rows="5" placeholder="Your Message" class="border-radius-4 bg-white medium-input"></textarea>
+                                        <input type="text" name="name" id="name" placeholder="Name*"  class="border-radius-4 bg-white medium-input required">
+                                        <input type="email" name="email" id="email" placeholder="E-mail*"  class="border-radius-4 bg-white medium-input required">
+                                        <input type="text" name="subject" id="subject" placeholder="Subject"  class="border-radius-4 bg-white medium-input required">
+                                        <textarea  type="text" name="comment" id="comment" rows="5" placeholder="Your Message"   class="border-radius-4 bg-white medium-input required "></textarea>
                                         <div class="form-group col mb-4 col-md-12">
                                             <div class="g-recaptcha" data-sitekey="6LecXnglAAAAAJN5UHK8J3dGbZawMdtg7OXRj4mQ"></div>
                                         </div>
-                                        <button id="contact-us-button-3" type="submit" class="btn btn-small border-radius-4 btn-dark-gray submit">send message</button>
+                                        <button  type="submit"  onclick="sendMail()" class="btn btn-small border-radius-4 btn-dark-gray submit">send message</button>
                                     </div>
                                 </div>
                             </form>
@@ -337,5 +337,42 @@
 
         gtag('config', 'UA-214543247-1');
         </script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("o395U4flrlufnl2CB");
+   })();
+</script>
+
+<script>
+   function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("subject").value,
+    comment : document.getElementById("comment").value,
+  };
+
+  const serviceID = "service_n91k5kr";
+  const templateID = "template_73pwg8m";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("comment").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+</script>
+
+
     </body>
 </html>
