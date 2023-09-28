@@ -4296,7 +4296,7 @@
     .md-landscape-h-700px { height: 700px !important; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
     h1, h2, h3, h4, h5, h6 {margin:0 0 17px; padding:0; letter-spacing: 0; font-weight: 400;}
     h1 {font-size:37px; line-height: 42px;}
     h2 {font-size:30px; line-height:36px}
@@ -5540,7 +5540,7 @@
     section {padding: 50px 0;}
     section.big-section {padding:80px 0;}
     section.extra-big-section {padding:100px 0;}
-    section.half-section {padding:25px 0;}
+    section.half-section {padding:5px 0;}
     .sm-col-2-nth .col-sm-6:nth-child(2n+1) {clear: left;}
     .sm-col-3-nth .col-sm-4:nth-child(3n+1) {clear: left;}
     .sm-col-4-nth .col-sm-3:nth-child(4n+1) {clear: left;}
