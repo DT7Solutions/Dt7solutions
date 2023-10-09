@@ -3971,10 +3971,10 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 }
 
 #brands-logo-sec .brand-logos img{
-    width: 350px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
     padding: 25px 0;
-    border-radius: 20px !important;
+    border-radius:5px !important;
    
 }
 
@@ -3994,4 +3994,14 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
     font-weight: 600;
     padding-bottom: 30px;
     font-family: Montserrat, sans-serif;
+}
+.ab-image img{
+    width: 100%;
+    height: 397px;
+}
+@media (min-width: 320px) and (max-width:480px){
+    .ab-image img{
+        width: 100%;
+        height: auto;
+    }
 }
