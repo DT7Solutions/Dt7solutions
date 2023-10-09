@@ -4005,3 +4005,9 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
         height: auto;
     }
 }
+
+@media (min-width: 320px) and (max-width:480px){
+    .title-overflow-hidden{
+        margin-left: 15px;
+    }
+}
