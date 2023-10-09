@@ -1640,7 +1640,7 @@
                 if ($('.top-header-area').length > 0) {
                     top_space_height = top_space_height + $('.top-header-area').outerHeight();
                 }
-                $('.top-space').css('margin-top', top_space_height + "px");
+                // $('.top-space').css('margin-top', top_space_height + "px");
             }
         }
     }

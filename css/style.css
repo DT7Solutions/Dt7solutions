@@ -3973,10 +3973,25 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
 #brands-logo-sec .brand-logos img{
     width: 350px;
     height: 160px;
-    padding: 20px 0;
-    border-radius: 20px !important;   
+    padding: 25px 0;
+    border-radius: 20px !important;
+   
+}
+
+#brands-logo-sec .brand-logos img:hover{
+    border: 1px solid lightgray;
+    box-shadow: 3px 4px 5px lightgray;
 }
 
 .animate__fadeIn .img-sec img{
     border-radius: 4px;
+}
+
+#brands-logo-sec .brands-title{
+    font-size:30px;
+    text-align: center;
+    color: #B22434;
+    font-weight: 600;
+    padding-bottom: 30px;
+    font-family: Montserrat, sans-serif;
 }
