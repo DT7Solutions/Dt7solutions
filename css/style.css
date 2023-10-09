@@ -3977,3 +3977,6 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
     border-radius: 20px !important;   
 }
 
+.animate__fadeIn .img-sec img{
+    border-radius: 4px;
+}
