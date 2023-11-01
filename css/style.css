@@ -4016,3 +4016,6 @@ aside .instafeed-grid.gutter-extra-large, footer .instafeed-grid.gutter-extra-la
     margin-right: 20px!important;
     margin-left: 20px!important;
 }
+.blog-post{
+    min-height:530px!important;
+}
