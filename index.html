@@ -1122,6 +1122,23 @@
             </div>
         </section>
         <!-- end blog section -->
+        <!-- popup strt -->
+        <div id="myModal" class="modal fade" role="dialog" style="display:flex;flex-direction: row;justify-content: center;">
+            <div class="modal-dialog" style="max-width: 800px;">
+              
+              <div class="modal-content">
+               
+                   
+                    
+                <div class="modal-body">
+                    
+                  <img src="images/hr-award.jpg" style="width:100%;"/>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+        <!-- popup end -->
         <!-- start footer --> 
         <footer class="footer-classic-dark bg-extra-dark-gray padding-five-bottom sm-padding-30px-bottom">
             <div class="footer-widget-area padding-five-top padding-30px-bottom sm-padding-30px-top">
@@ -1242,5 +1259,21 @@
 
         gtag('config', 'UA-214543247-1');
         </script>
+        <script type="text/javascript">
+        const downEl = document.querySelector('close')
+        window.onload = function(){ 
+          setTimeout(function(){
+            $('#myModal').modal('show');
+          },2000);
+        
+          downEl.addEventLisener('Click', () => {
+        
+        $('#myModal').modal('none')
+        })
+         
+        }
+                        
+        </script>
+       
     </body>
 </html>
