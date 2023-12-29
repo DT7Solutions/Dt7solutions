@@ -7227,7 +7227,7 @@
     }
 }
 
-@media screen and (min-width:768px) and (max-width:991px) {
+/* @media screen and (min-width:768px) and (max-width:991px) {
     #clients{
         display: none !important;
         height: 150px;
@@ -7239,7 +7239,7 @@
     #clients{
         display: none !important;
     }
-}
+} */
 
 
 
