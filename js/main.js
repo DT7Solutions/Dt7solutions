@@ -1897,3 +1897,32 @@
     }
 
 })(jQuery);
+
+//  Header Logo Change based on Nav Sticky Mode //
+
+var navbar = document.querySelector('.navbar-fixed-top');
+
+function toggleLogo() {
+
+    var isSticky = navbar.classList.contains('sticky');
+
+    var blackLogo = document.querySelector('.black-logo');
+    var whiteLogo = document.querySelector('.white-logo');
+
+    if (isSticky) {
+        blackLogo.style.display = 'block';
+        whiteLogo.style.display = 'none';
+    } else {
+        blackLogo.style.display = 'none';
+        whiteLogo.style.display = 'block';
+    }
+}
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+    toggleLogo();
+});
