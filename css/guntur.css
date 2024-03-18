@@ -105,6 +105,10 @@ nav .accordion-menu {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 350px;
+}
+.features{
+  min-height: 350px;
 }
 
 .input-border {
@@ -145,6 +149,12 @@ footer .small-icon .icon a i{
 }
 
 /* ======================= Home Page Responsive ======================== */
+@media (max-width: 991px) {
+  nav.navbar.bootsnav.no-full .navbar-collapse,
+  nav.navbar.bootsnav.no-full .navbar-collapse .show {
+    max-height: 500px !important;
+  }
+}
 @media (min-width: 992px) {
   .dropdown.megamenu-fw-btn {
     display: none;
