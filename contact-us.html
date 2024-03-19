@@ -151,7 +151,7 @@
                                         <input type="text" name="name" id="name" placeholder="Name*"  class="border-radius-4 bg-white medium-input required">
                                         <input type="email" name="email" id="email" placeholder="E-mail*"  class="border-radius-4 bg-white medium-input required">
                                         <input type="text" name="subject" id="subject" placeholder="Subject"  class="border-radius-4 bg-white medium-input required">
-                                        <textarea  type="text" name="comment" id="comment" rows="5" placeholder="Your Message"   class="border-radius-4 bg-white medium-input required "></textarea>
+                                        <textarea  type="text" name="message" id="message" rows="5" placeholder="Your Message"   class="border-radius-4 bg-white medium-input required "></textarea>
                                         <div class="form-group col mb-4 col-md-12">
                                             <div class="g-recaptcha" data-sitekey="6LecXnglAAAAAJN5UHK8J3dGbZawMdtg7OXRj4mQ"></div>
                                         </div>
@@ -348,41 +348,40 @@
 
         gtag('config', 'UA-214543247-1');
         </script>
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("o395U4flrlufnl2CB");
-   })();
-</script>
 
-<script>
-   function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("subject").value,
-    comment : document.getElementById("comment").value,
-  };
+        <!-- Start Contact Form Email.js Link -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){ 
+                // emailjs.init("Account Public Key");
+                emailjs.init("Kl-mRwhsVzxoTLfvu"); 
+            })();
+        </script>
+        <script>
+            function sendMail() {
+                var form = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    message : document.getElementById("message").value,
+                };
 
-  const serviceID = "service_n9bkqgj";
-  const templateID = "template_73pwg8m";
-
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("subject").value = "";
-        document.getElementById("comment").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!")
-
-    })
-    .catch(err=>console.log(err));
-
-}
-</script>
+                const serviceID = "service_n91k5kr";
+                const templateID = "template_m4alf2d";             
+                
+                // emailjs.send("Service_ID", "Template_ID", formData)
+                emailjs.send(serviceID, templateID, form).then(res=>{
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res, form);
+                    alert("Your message sent successfully!!")
+                })
+                .catch(err=>console.log(err));
+            }
+        </script>
+        <!-- End Contact Form Email.js Link -->
 
 
     </body>

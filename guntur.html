@@ -2,17 +2,13 @@
 <html class="no-js" lang="en">
     <head>
         <!-- title -->
-        <title>Leading Software development company in Guntur | DT7 Solutions
-        </title>
+        <title>Best Web Development and Digital Marketing Company in Guntur || DT7Solutions</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
         <meta name="author" content="Dt7Solutions">
         <!-- description -->
-        <meta name="description" content="DT7solutions is one among the leading software development companies in Guntur, India which 
-        offers wed development, Digital marketing, E-commerce development and mobile apps at affordable
-        prices.
-        ">
+        <meta name="description" content="We, DT7Solutions are the top leading Web Development and Digital Marketing Company in Guntur offers various services like E Commerce, Mobile App, SEO,SMO, Branding, Logo Design & Email Marketing.">
         <!-- keywords -->
         <meta name="keywords" content="web development,digital marketing, e-commerce listing, seo, Best IT Solutions Company in South India">
         <!-- favicon -->
@@ -33,6 +29,9 @@
         <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- Home Page Custom style sheets -->
         <link rel="stylesheet" type="text/css" href="css/guntur.css" />
+        <!-- Contact Form Recaptcha Link-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
     </head>
     <body>
 
@@ -634,15 +633,18 @@
                             standard dummy text ever since when an unknown.
                         </p>
                         <div>
-                            <form id="contact-form-2" action="email-templates/contact-form.php" method="post">
+                            <form id="contact-form-2">
                                 <div class="row justify-content-center">
                                     <div class="col-12 wow animate__fadeIn">
                                         <div class="form-results d-none"></div>
                                         <input type="text" name="name" id="name" placeholder="Name*" class="input-border-bottom required">
                                         <input type="email" name="email" id="email" placeholder="E-mail*" class="input-border-bottom required">
-                                        <input type="text" id="subject" name="subject" placeholder="Subject" class="input-border-bottom">
-                                        <textarea name="comment" id="comment" placeholder="Your Message" class="input-border" rows="6" cols="50"></textarea>
-                                        <button id="contact-us-button-2" type="submit" class="btn btn-small btn-deep-pink margin-30px-top sm-margin-three-top submit">Submit</button>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject" class="input-border-bottom">
+                                        <textarea name="message" id="message" placeholder="Your Message" class="input-border" rows="6" cols="50"></textarea>
+                                        <div class="form-group col col-md-12">
+                                            <div class="g-recaptcha" data-sitekey="6LecXnglAAAAAJN5UHK8J3dGbZawMdtg7OXRj4mQ"></div>
+                                        </div>
+                                        <button id="contact-us-button-2" type="submit"  onclick="sendMail()" class="btn btn-small btn-deep-pink margin-30px-top sm-margin-three-top submit">Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -761,7 +763,7 @@
                                     <div class="col-lg-2 col-sm-6 widget text-center text-sm-start">
                                         <div class="widget-title alt-font text-small text-white text-uppercase margin-15px-bottom font-weight-600">Follow Us</div>
                                         <div class="w-100 d-inline-block">
-                                            <div class="social-icon-style-8 d-inline-block align-middle">
+                                            <div class="social-icon-style-9 d-inline-block align-middle">
                                             <ul class="small-icon mb-0">
                                                 <li class="icon"><a class="facebook text-white-2" href="https://www.facebook.com/DT7solutions-101069394994066/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                                 <li class="icon"><a class="twitter text-white-2" href="https://twitter.com/dt7solutions" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -841,6 +843,40 @@
 
         gtag('config', 'UA-214543247-1');
         </script>
+        <!-- Start Contact Form Email.js Link -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){ 
+                // emailjs.init("Account Public Key");
+                emailjs.init("Kl-mRwhsVzxoTLfvu"); 
+            })();
+        </script>
+        <script>
+            function sendMail() {
+                var form = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    message : document.getElementById("message").value,
+                };
+
+                const serviceID = "service_lg6x5es";
+                const templateID = "template_ovix1ve";             
+                
+                // emailjs.send("Service_ID", "Template_ID", formData)
+                emailjs.send(serviceID, templateID, form).then(res=>{
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res, form);
+                    alert("Your message sent successfully!!")
+                })
+                .catch(err=>console.log(err));
+            }
+        </script>
+        <!-- End Contact Form Email.js Link -->
+
         <!-- <script type="text/javascript">
         const downEl = document.querySelector('close')
         window.onload = function(){ 
